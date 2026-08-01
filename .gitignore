@@ -1,0 +1,21 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+.output/
+
+# Vite cache
+.vite/
+
+# Editor files
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Package manager lockfiles if using one specific manager
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
