@@ -9,7 +9,7 @@ import { useAuth } from "@/contexts/auth-context";
 import { AddStaffDialog } from "@/components/staff/add-staff-dialog";
 
 export const Route = createFileRoute("/admin/staff")({
-  head: () => ({ meta: [{ title: "Staff — Recell Admin" }] }),
+  head: () => ({ meta: [{ title: "Staff — Raghu Mobiles Admin" }] }),
   component: Staff,
 });
 

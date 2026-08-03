@@ -1,4 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import logoUrl from "@/assets/logo.png";
 import { Menu, ShoppingBag, Heart, User, Search, Moon, Sun, Instagram, Twitter, Facebook } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -34,7 +35,7 @@ export function SiteHeader() {
     <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-background/80 backdrop-blur-[24px] border-b border-white/40 shadow-sm' : 'bg-transparent border-transparent'}`}>
       <div className="container-page flex h-20 items-center gap-6">
         <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
-          <div className="grid h-9 w-9 place-items-center rounded-full bg-foreground text-background text-sm font-bold transition-transform duration-300 group-hover:scale-105">R</div>
+          <img src={logoUrl} alt="Raghu Mobiles" className="h-9 w-9 object-contain transition-transform duration-300 group-hover:scale-105" />
           <span className="font-semibold tracking-tight text-[15px]">Raghu Mobiles</span>
         </Link>
         <nav className="hidden md:flex items-center gap-2 mx-auto bg-white/40 dark:bg-black/20 backdrop-blur-md px-2 py-1.5 rounded-full border border-white/40 shadow-sm">
@@ -50,9 +51,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-1.5">
-          <Button 
-            variant="ghost" 
-            size="icon" 
+          <Button
+            variant="ghost"
+            size="icon"
             className="rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-transform duration-300 hover:scale-105"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
@@ -72,7 +73,7 @@ export function SiteHeader() {
               )}
             </Link>
           </Button>
-          
+
           {user ? (
             <div className="flex items-center gap-2 relative group">
               <Link to="/" className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-semibold text-xs hover:bg-primary/20 transition-colors">
@@ -80,7 +81,7 @@ export function SiteHeader() {
               </Link>
               {/* Dropdown can go here if needed, or simple logout on click */}
               <div className="absolute right-0 top-full mt-2 w-32 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                <button 
+                <button
                   onClick={logout}
                   className="w-full text-left px-4 py-2 text-sm text-destructive hover:bg-muted rounded-lg"
                 >
@@ -123,11 +124,11 @@ export function SiteFooter() {
     <footer className="mt-32 pt-16 pb-8 border-t border-border/20 bg-background relative overflow-hidden">
       {/* Background soft glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[400px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
-      
+
       <div className="container-page grid gap-12 md:grid-cols-4 relative z-10">
         <div className="space-y-5">
           <div className="flex items-center gap-2 group">
-            <div className="grid h-8 w-8 place-items-center rounded-xl bg-foreground text-background text-sm font-bold transition-transform duration-300 group-hover:scale-105">R</div>
+            <img src={logoUrl} alt="Raghu Mobiles" className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-105" />
             <span className="font-semibold tracking-tight text-lg">Raghu Mobiles</span>
           </div>
           <p className="text-sm text-muted-foreground/80 max-w-xs leading-relaxed">Certified pre-owned smartphones. Rigorously tested, warranted, and delivered with care.</p>
@@ -139,7 +140,7 @@ export function SiteFooter() {
             ))}
           </div>
         </div>
-        
+
         <div>
           <div className="text-xs font-semibold text-foreground tracking-wider mb-5">Shop</div>
           <ul className="space-y-3 text-sm">
@@ -147,7 +148,7 @@ export function SiteFooter() {
             <li><Link to="/wishlist" className="text-muted-foreground/80 hover:text-primary transition-colors">Wishlist</Link></li>
           </ul>
         </div>
-        
+
         <div>
           <div className="text-xs font-semibold text-foreground tracking-wider mb-5">Company</div>
           <ul className="space-y-3 text-sm">
@@ -156,7 +157,7 @@ export function SiteFooter() {
             <li><Link to="/admin" className="text-muted-foreground/80 hover:text-primary transition-colors">Admin Console</Link></li>
           </ul>
         </div>
-        
+
         <div>
           <div className="text-xs font-semibold text-foreground tracking-wider mb-5">Contact Us</div>
           <div className="text-sm text-muted-foreground/80 space-y-3">
@@ -168,10 +169,10 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      
+
       <div className="container-page mt-20 pt-6 border-t border-border/30 relative z-10">
         <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-muted-foreground/60">
-          <span>© 2026 Recell Pre-Owned Pvt. Ltd. All rights reserved.</span>
+          <span>© 2026 Raghu Mobiles. All rights reserved.</span>
           <div className="flex gap-4">
             <Link to="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="#" className="hover:text-foreground transition-colors">Terms of Service</Link>

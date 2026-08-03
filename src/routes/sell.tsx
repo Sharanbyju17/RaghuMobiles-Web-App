@@ -10,7 +10,7 @@ import { Check, Zap, Truck, Wallet, ArrowRight } from "lucide-react";
 import { inr } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/sell")({
-  head: () => ({ meta: [{ title: "Sell Your Phone — Recell" }, { name: "description", content: "Get an instant quote for your old phone. Free pickup, instant payment." }] }),
+  head: () => ({ meta: [{ title: "Sell Your Phone — Raghu Mobiles" }, { name: "description", content: "Get an instant quote for your old phone. Free pickup, instant payment." }] }),
   component: Sell,
 });
 

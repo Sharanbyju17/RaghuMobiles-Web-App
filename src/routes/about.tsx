@@ -3,7 +3,7 @@ import { SiteLayout } from "@/components/layout/site-layout";
 import { ShieldCheck, Recycle, Award, Users } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({ meta: [{ title: "About — Recell" }, { name: "description", content: "Our mission to make premium phones accessible and sustainable." }] }),
+  head: () => ({ meta: [{ title: "About — Raghu Mobiles" }, { name: "description", content: "Our mission to make premium phones accessible and sustainable." }] }),
   component: About,
 });
 
@@ -11,7 +11,7 @@ function About() {
   return (
     <SiteLayout>
       <section className="container-page py-20 md:py-28 max-w-3xl">
-        <div className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">About Recell</div>
+        <div className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">About Raghu Mobiles</div>
         <h1 className="mt-3 text-5xl md:text-6xl font-semibold tracking-tight leading-tight">Great phones, second time around.</h1>
         <p className="mt-6 text-lg text-muted-foreground">
           We're a team of engineers, technicians and retailers making premium smartphones accessible — while keeping them out of landfills.

@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Bar, BarChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis, Legend } from "recharts";
 
 export const Route = createFileRoute("/admin/reports")({
-  head: () => ({ meta: [{ title: "Reports — Recell Admin" }] }),
+  head: () => ({ meta: [{ title: "Reports — Raghu Mobiles Admin" }] }),
   component: Reports,
 });
 

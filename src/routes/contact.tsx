@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({ meta: [{ title: "Contact — Recell" }, { name: "description", content: "Get in touch with the Recell team." }] }),
+  head: () => ({ meta: [{ title: "Contact — Raghu Mobiles" }, { name: "description", content: "Get in touch with the Raghu Mobiles team." }] }),
   component: Contact,
 });
 
@@ -20,7 +20,7 @@ function Contact() {
           <p className="mt-3 text-muted-foreground max-w-md">We'd love to hear from you. Reach out for support, partnerships, or press.</p>
           <div className="mt-10 space-y-5">
             {[
-              { i: Mail, l: "Email", v: "hello@recell.in" },
+              { i: Mail, l: "Email", v: "hello@raghumobiles.in" },
               { i: Phone, l: "Phone", v: "+91 98200 00000" },
               { i: MapPin, l: "Flagship store", v: "Linking Road, Bandra West, Mumbai" },
             ].map((c) => (

@@ -6,7 +6,7 @@ import { useShop } from "@/contexts/shop-context";
 import { Product } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/wishlist")({
-  head: () => ({ meta: [{ title: "Wishlist — Recell" }] }),
+  head: () => ({ meta: [{ title: "Wishlist — Raghu Mobiles" }] }),
   loader: async () => {
     try {
       const res = await fetch("http://localhost:8000/api/v1/inventory/products");

@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Product } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/cart")({
-  head: () => ({ meta: [{ title: "Cart — Recell" }] }),
+  head: () => ({ meta: [{ title: "Cart — Raghu Mobiles" }] }),
   loader: async () => {
     try {
       const res = await fetch("http://localhost:8000/api/v1/inventory/products");

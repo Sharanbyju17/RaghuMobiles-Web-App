@@ -67,7 +67,7 @@ export class AuthService {
     }
   }
 
-  static async registerUser(data: { phone: string; otp: string; fullName: string; city: string }): Promise<{ success: boolean; user?: User; token?: string }> {
+  static async registerUser(data: { phone: string; otp: string; fullName: string; city: string }): Promise<{ success: boolean; user?: User; token?: string; isNewUser?: boolean }> {
     try {
       const response = await fetch(`${API_BASE}/auth/verify-otp`, {
         method: "POST",

@@ -3,7 +3,7 @@ import { StaffShell } from "@/components/layout/staff-shell";
 import { ProductForm } from "@/components/inventory/product-form";
 
 export const Route = createFileRoute("/staff/products_/add")({
-  head: () => ({ meta: [{ title: "Add Product — Recell Staff" }] }),
+  head: () => ({ meta: [{ title: "Add Product — Raghu Mobiles Staff" }] }),
   component: AddProduct,
 });
 

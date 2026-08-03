@@ -6,7 +6,7 @@ import { useAuth } from "@/contexts/auth-context";
 import { Loader2 } from "lucide-react";
 
 export const Route = createFileRoute("/admin/inventory_/$id/edit")({
-  head: () => ({ meta: [{ title: "Edit Product — Recell Admin" }] }),
+  head: () => ({ meta: [{ title: "Edit Product — Raghu Mobiles Admin" }] }),
   component: EditProduct,
 });
 

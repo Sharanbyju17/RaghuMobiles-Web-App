@@ -7,7 +7,7 @@ import { ArrowUpRight, IndianRupee, Package, Users, ShoppingCart, ScanLine } fro
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis, CartesianGrid } from "recharts";
 
 export const Route = createFileRoute("/staff/")({
-  head: () => ({ meta: [{ title: "Staff Dashboard — Recell" }] }),
+  head: () => ({ meta: [{ title: "Staff Dashboard — Raghu Mobiles" }] }),
   component: Dashboard,
 });
 

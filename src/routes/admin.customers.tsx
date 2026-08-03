@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Search, Plus, MoreHorizontal } from "lucide-react";
 
 export const Route = createFileRoute("/admin/customers")({
-  head: () => ({ meta: [{ title: "Customers — Recell Admin" }] }),
+  head: () => ({ meta: [{ title: "Customers — Raghu Mobiles Admin" }] }),
   component: Customers,
 });
 

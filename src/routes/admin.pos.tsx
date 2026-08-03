@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import { useAuth } from "@/contexts/auth-context";
 
 export const Route = createFileRoute("/admin/pos")({
-  head: () => ({ meta: [{ title: "POS Billing — Recell Admin" }] }),
+  head: () => ({ meta: [{ title: "POS Billing — Raghu Mobiles Admin" }] }),
   component: POS,
 });
 
@@ -214,7 +214,7 @@ function POS() {
             {payment === "upi" && (
               <div className="p-4 rounded-2xl bg-surface border border-border flex items-center gap-3">
                 <div className="h-20 w-20 rounded-xl bg-background border border-border grid place-items-center"><QrCode className="h-12 w-12" /></div>
-                <div><div className="text-sm font-medium">Scan to pay {inr(total)}</div><div className="text-xs text-muted-foreground">recell@upi</div></div>
+                <div><div className="text-sm font-medium">Scan to pay {inr(total)}</div><div className="text-xs text-muted-foreground">raghumobiles@upi</div></div>
               </div>
             )}
 
@@ -226,7 +226,7 @@ function POS() {
                 <DialogTitle className="sr-only">Receipt</DialogTitle>
                 <div className="p-6 bg-background">
                   <div className="text-center pb-4 border-b border-dashed border-border">
-                    <div className="font-bold text-lg tracking-tight">RECELL</div>
+                    <div className="font-bold text-lg tracking-tight">RAGHU MOBILES WHOLESALE</div>
                     <div className="text-xs text-muted-foreground">Bandra Flagship · +91 98200 00000</div>
                   </div>
                   <div className="py-3 text-xs text-muted-foreground flex justify-between">
@@ -248,7 +248,7 @@ function POS() {
                     <div className="flex justify-between font-semibold pt-1 border-t border-border"><span>Total</span><span>{inr(total)}</span></div>
                     <div className="flex justify-between text-xs text-muted-foreground pt-1"><span>Paid via {payment.toUpperCase()}</span><span>PAID</span></div>
                   </div>
-                  <div className="text-center text-xs text-muted-foreground pt-3 border-t border-dashed border-border">Thank you for shopping with Recell</div>
+                  <div className="text-center text-xs text-muted-foreground pt-3 border-t border-dashed border-border">Thank you for shopping with Raghu Mobiles Wholesale</div>
                 </div>
                 <div className="p-4 bg-surface flex gap-2 border-t border-border">
                   <Button variant="outline" className="flex-1 rounded-full">Email</Button>

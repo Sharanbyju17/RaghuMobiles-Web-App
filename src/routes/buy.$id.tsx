@@ -46,7 +46,7 @@ export const Route = createFileRoute("/buy/$id")({
   },
   head: ({ loaderData }) => ({
     meta: loaderData
-      ? [{ title: `${loaderData.product.model} — Recell` }, { name: "description", content: loaderData.product.highlights.join(" · ") }, { property: "og:image", content: loaderData.product.image }]
+      ? [{ title: `${loaderData.product.model} — Raghu Mobiles` }, { name: "description", content: loaderData.product.highlights.join(" · ") }, { property: "og:image", content: loaderData.product.image }]
       : [{ title: "Not found" }, { name: "robots", content: "noindex" }],
   }),
   notFoundComponent: () => (
@@ -74,7 +74,7 @@ function ProductDetail() {
             </div>
             {p.gallery.length > 1 && (
               <div className="mt-4 flex gap-3">
-                {p.gallery.map((g, i) => (
+                {p.gallery.map((g: string, i: number) => (
                   <button key={i} onClick={() => setActive(i)}
                     className={`h-20 w-20 rounded-2xl overflow-hidden border-2 transition-colors ${active === i ? "border-foreground" : "border-transparent"}`}>
                     <img src={g} alt="" className="h-full w-full object-cover" />
@@ -121,7 +121,7 @@ function ProductDetail() {
             <div className="mt-8">
               <h3 className="font-semibold mb-3">Highlights</h3>
               <ul className="space-y-2">
-                {p.highlights.map((h) => (
+                {p.highlights.map((h: string) => (
                   <li key={h} className="flex items-center gap-2 text-sm"><Check className="h-4 w-4 text-success" />{h}</li>
                 ))}
               </ul>

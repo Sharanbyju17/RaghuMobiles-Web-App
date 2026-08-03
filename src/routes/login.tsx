@@ -1,4 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import logoUrl from "@/assets/logo.png";
 import { useState } from "react";
 import { AuthLayout } from "@/components/auth/auth-layout";
 import { AuthCard } from "@/components/auth/auth-card";
@@ -13,7 +14,7 @@ import { AuthService, UserRole } from "@/lib/auth-service";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Sign in — Recell" },
+      { title: "Sign in — Raghu Mobiles" },
       { name: "description", content: "Sign in with your phone number." },
     ],
   }),
@@ -105,12 +106,10 @@ function Login() {
       <AuthCard>
         {step === "landing" && (
           <div className="animate-fade-up flex flex-col items-center text-center">
-            <div className="grid h-16 w-16 place-items-center rounded-2xl bg-foreground text-background mb-6 shadow-xl">
-              <ShieldCheck className="h-8 w-8" />
-            </div>
-            <h1 className="text-3xl font-semibold tracking-tight mb-2">Welcome to Recell</h1>
+            <img src={logoUrl} alt="Raghu Mobiles" className="h-20 w-20 object-contain mb-6 drop-shadow-xl" />
+            <h1 className="text-3xl font-semibold tracking-tight mb-2">Welcome to Raghu Mobiles</h1>
             <p className="text-muted-foreground mb-8">
-              Sign in or create an account to manage your certified pre-owned devices.
+              Sign in or create an account to manage your wholesale mobile shop.
             </p>
             <div className="flex flex-col gap-3 w-full">
               <Button size="lg" className="w-full rounded-full h-12 text-md" onClick={() => { setIsSignUpMode(false); setStep("phone"); }}>

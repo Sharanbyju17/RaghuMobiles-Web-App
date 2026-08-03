@@ -3,7 +3,7 @@ import { AdminShell } from "@/components/layout/admin-shell";
 import { ProductForm } from "@/components/inventory/product-form";
 
 export const Route = createFileRoute("/admin/inventory_/add")({
-  head: () => ({ meta: [{ title: "Add Product — Recell Admin" }] }),
+  head: () => ({ meta: [{ title: "Add Product — Raghu Mobiles Admin" }] }),
   component: AddProduct,
 });
 

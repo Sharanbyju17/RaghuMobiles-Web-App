@@ -155,7 +155,7 @@ function Home() {
           </Link>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {products.slice(0, 4).map((p, i) => (
+          {products.slice(0, 4).map((p: Product, i: number) => (
             <div key={p.id} className="animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
               <ProductCard p={p} />
             </div>

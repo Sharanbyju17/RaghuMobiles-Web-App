@@ -4,7 +4,7 @@ import { ProductForm } from "@/components/inventory/product-form";
 import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/staff/products_/$id/edit")({
-  head: () => ({ meta: [{ title: "Edit Product — Recell Staff" }] }),
+  head: () => ({ meta: [{ title: "Edit Product — Raghu Mobiles Staff" }] }),
   component: EditProduct,
 });
 
@@ -39,7 +39,7 @@ function EditProduct() {
         {loading ? (
           <div className="h-64 flex items-center justify-center text-muted-foreground animate-pulse">Loading product data...</div>
         ) : product ? (
-          <ProductForm initialData={product} isEdit onSubmitSuccess={() => navigate({ to: "/staff/products" })} />
+          <ProductForm initialData={product} onSubmitSuccess={() => navigate({ to: "/staff/products" })} />
         ) : (
           <div className="text-center text-destructive py-12">Product not found</div>
         )}

@@ -11,7 +11,7 @@ import { Check, ShieldCheck } from "lucide-react";
 import { Product } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/checkout")({
-  head: () => ({ meta: [{ title: "Checkout — Recell" }] }),
+  head: () => ({ meta: [{ title: "Checkout — Raghu Mobiles" }] }),
   loader: async () => {
     try {
       const res = await fetch("http://localhost:8000/api/v1/inventory/products");

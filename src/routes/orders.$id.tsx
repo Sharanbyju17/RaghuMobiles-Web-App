@@ -5,7 +5,7 @@ import { Check, Package, Truck, Home } from "lucide-react";
 import { products, inr } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/orders/$id")({
-  head: ({ params }) => ({ meta: [{ title: `Order ${params.id} — Recell` }] }),
+  head: ({ params }) => ({ meta: [{ title: `Order ${params.id} — Raghu Mobiles` }] }),
   component: OrderTrack,
 });
 

@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Product } from "@/lib/mock-data";
 
 export const Route = createFileRoute("/buy/")({
-  head: () => ({ meta: [{ title: "Buy Mobiles — Recell" }, { name: "description", content: "Shop certified pre-owned iPhones, Samsung, OnePlus and more." }] }),
+  head: () => ({ meta: [{ title: "Buy Mobiles — Raghu Mobiles" }, { name: "description", content: "Shop wholesale mobiles iPhones, Samsung, OnePlus and more." }] }),
   loader: async () => {
     try {
       const res = await fetch("http://localhost:8000/api/v1/inventory/products");
@@ -62,9 +62,8 @@ function Filters({ query, setQuery, brand, setBrand, price, setPrice, condition,
         <div className="flex flex-wrap gap-2">
           {["All", ...brands].map((b) => (
             <button key={b} onClick={() => setBrand(b)}
-              className={`px-3 py-1.5 text-xs rounded-full border transition-colors ${
-                brand === b ? "bg-foreground text-background border-foreground" : "bg-background hover:bg-secondary border-border"
-              }`}>{b}</button>
+              className={`px-3 py-1.5 text-xs rounded-full border transition-colors ${brand === b ? "bg-foreground text-background border-foreground" : "bg-background hover:bg-secondary border-border"
+                }`}>{b}</button>
           ))}
         </div>
       </div>
@@ -73,9 +72,8 @@ function Filters({ query, setQuery, brand, setBrand, price, setPrice, condition,
         <div className="flex flex-wrap gap-2">
           {["All", ...conditions].map((c) => (
             <button key={c} onClick={() => setCondition(c)}
-              className={`px-3 py-1.5 text-xs rounded-full border transition-colors ${
-                condition === c ? "bg-foreground text-background border-foreground" : "bg-background hover:bg-secondary border-border"
-              }`}>{c}</button>
+              className={`px-3 py-1.5 text-xs rounded-full border transition-colors ${condition === c ? "bg-foreground text-background border-foreground" : "bg-background hover:bg-secondary border-border"
+                }`}>{c}</button>
           ))}
         </div>
       </div>
@@ -94,7 +92,7 @@ function BuyPage() {
   const [condition, setCondition] = useState("All");
   const [price, setPrice] = useState(80000);
 
-  const filtered = useMemo(() => products.filter((p) =>
+  const filtered = useMemo(() => products.filter((p: Product) =>
     (brand === "All" || p.brand === brand) &&
     (condition === "All" || p.condition === condition) &&
     p.price <= price &&
@@ -139,7 +137,7 @@ function BuyPage() {
               </div>
             )}
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {filtered.map((p) => <ProductCard key={p.id} p={p} />)}
+              {filtered.map((p: Product) => <ProductCard key={p.id} p={p} />)}
             </div>
             {filtered.length === 0 && (
               <div className="text-center py-24 text-muted-foreground">No devices match your filters.</div>

@@ -12,7 +12,7 @@ import { useAuth } from "@/contexts/auth-context";
 import { BulkUploadDialog } from "@/components/inventory/bulk-upload-dialog";
 
 export const Route = createFileRoute("/admin/inventory")({
-  head: () => ({ meta: [{ title: "Inventory — Recell Admin" }] }),
+  head: () => ({ meta: [{ title: "Inventory — Raghu Mobiles Admin" }] }),
   component: Inventory,
 });
 

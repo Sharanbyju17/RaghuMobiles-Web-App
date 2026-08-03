@@ -1,4 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import logoUrl from "@/assets/logo.png";
 import { useAuth } from "@/contexts/auth-context";
 import { LayoutDashboard, Package, Users, UserCog, BarChart3, ScanLine, ArrowLeft, Bell, Search } from "lucide-react";
 import {
@@ -44,9 +45,9 @@ function AdminSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="border-b border-sidebar-border">
         <Link to="/admin" className="flex items-center gap-2 px-2 py-1">
-          <div className="grid h-8 w-8 place-items-center rounded-xl bg-foreground text-background text-sm font-bold">R</div>
+          <img src={logoUrl} alt="Raghu Mobiles" className="h-8 w-8 object-contain" />
           <div className="flex flex-col leading-tight group-data-[collapsible=icon]:hidden">
-            <span className="font-semibold text-sm">Recell</span>
+            <span className="font-semibold text-sm">Raghu Mobiles</span>
             <span className="text-[11px] text-muted-foreground">Admin Console</span>
           </div>
         </Link>
