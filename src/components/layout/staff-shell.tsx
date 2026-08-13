@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import logoUrl from "@/assets/logo.png";
+import logoUrl from "@/assets/Images/logo.png";
 import { useAuth } from "@/contexts/auth-context";
 import { LayoutDashboard, Package, UserCog, BarChart3, ScanLine, ArrowLeft, Bell, Search, CalendarClock } from "lucide-react";
 import {

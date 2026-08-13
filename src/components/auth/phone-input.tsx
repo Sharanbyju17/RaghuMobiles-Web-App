@@ -10,9 +10,27 @@ interface PhoneInputProps {
 
 export function PhoneInput({ value, onChange, className, disabled }: PhoneInputProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // Only allow numbers and max length 10
-    const val = e.target.value.replace(/\D/g, "").slice(0, 10);
-    onChange(val);
+    onChange(e.target.value);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Allow digits, control keys, and keyboard shortcuts
+    if (
+      !/^[0-9]$/.test(e.key) &&
+      !['Backspace', 'Tab', 'Enter', 'Escape', 'ArrowLeft', 'ArrowRight', 'Delete', 'Home', 'End'].includes(e.key) &&
+      !e.ctrlKey &&
+      !e.metaKey
+    ) {
+      e.preventDefault();
+    }
+  };
+
+  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    const pastedText = e.clipboardData.getData('text');
+    // Allow paste only if it contains just numbers
+    if (!/^\d+$/.test(pastedText.replace(/\s+/g, ''))) {
+      e.preventDefault();
+    }
   };
 
   return (
@@ -21,10 +39,15 @@ export function PhoneInput({ value, onChange, className, disabled }: PhoneInputP
         +91
       </div>
       <Input
+        type="text"
+        inputMode="numeric"
+        pattern="[0-9]*"
         value={value}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
+        onPaste={handlePaste}
         placeholder="Phone number"
-        inputMode="numeric"
+        maxLength={10}
         disabled={disabled}
         className="h-12 rounded-xl text-lg tracking-wide focus-visible:ring-1 focus-visible:ring-primary/20 bg-background/50 border-input transition-all duration-300"
       />

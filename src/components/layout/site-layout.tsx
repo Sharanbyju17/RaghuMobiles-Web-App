@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import logoUrl from "@/assets/logo.png";
+import logoUrl from "@/assets/Images/logo.png";
 import { Menu, ShoppingBag, Heart, User, Search, Moon, Sun, Instagram, Twitter, Facebook } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
